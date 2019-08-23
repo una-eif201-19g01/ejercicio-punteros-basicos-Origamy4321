@@ -21,9 +21,12 @@ class Punteros {
     static int numeroAlCuboValor(int);
     static int numeroAlCuboPuntero(int *);
     static int numeroAlCuboReferencia(int &);
-    static int numeroAlCuadradoValor(int);
-    static int numeroAlCuadradoPuntero(int *);
-    static int numeroAlCuadradoReferencia(int &);
+
+    static float numeroRaizAlCuadradoValor(float);
+
+    static float numeroRaizAlCuadradoPuntero(float *);
+
+    static float numeroRaizAlCuadradoReferencia(float &);
 
 public:
     Punteros();
@@ -32,7 +35,8 @@ public:
     static void imprimirCalculoAlCuboReferenciaValor();
     static void imprimirCalculoAlCuboReferenciaPuntero();
     static void imprimirCalculoAlCuboReferenciaReferencia();
-    static void imprimirCalculoRaizCuadradValor();
+
+    static void imprimirCalculoRaizCuadradaValor();
     static void imprimirCalculoRaizCuadradaPuntero();
     static void impirmirCalculoRaizCuadradaReferencia();
 };

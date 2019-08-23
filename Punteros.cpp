@@ -18,6 +18,8 @@
 #include <math.h>
 #include "Punteros.h"
 
+using namespace std;
+
 Punteros::Punteros() = default;
 
 int Punteros::numeroAlCuboValor(int numero) {
@@ -98,33 +100,61 @@ void Punteros::imprimirCalculoAlCuboReferenciaReferencia() {
     std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
 }
 
-int Punteros::numeroAlCuadradoValor(int numero) {
+float Punteros::numeroRaizAlCuadradoValor(float numero) {
 
     numero = sqrt(numero);
     return numero;
 }
 
-int Punteros::numeroAlCuadradoPuntero(int *numero) {
+float Punteros::numeroRaizAlCuadradoPuntero(float *numero) {
 
     *numero = sqrt(*numero);
     return *numero;
 }
 
-int Punteros::numeroAlCuadradoReferencia(int &numero) {
+float Punteros::numeroRaizAlCuadradoReferencia(float &numero) {
 
     numero = sqrt(numero);
 
     return numero;
 }
 
-void Punteros::imprimirCalculoRaizCuadradValor() {
+void Punteros::imprimirCalculoRaizCuadradaValor() {
+
+    float numeroide = 0.0;
+
+    numeroide = 5;
+
+    cout << "\n Imprime datos de los punteros que pasan por valor_____________________________" << endl;
+    cout << "\t El valor originala de la variable [ numero ] es: " << numeroide << endl;
+    numeroide = numeroRaizAlCuadradoValor(numeroide);
+    cout << "\n\t El resultado a la raiz cuadrad de la variable [numero] es:" << numeroide << endl << endl;
+
 
 }
 
 void Punteros::imprimirCalculoRaizCuadradaPuntero() {
+    float numeroide = 0.0;
+
+    numeroide = 5;
+
+    cout << "\n Imprime datos de los punteros que pasan por valor_____________________________" << endl;
+    cout << "\t El valor originala de la variable [ numero ] es: " << numeroide << endl;
+    numeroide = numeroRaizAlCuadradoPuntero(&numeroide);
+    cout << "\n\t El resultado a la raiz cuadrad de la variable [numero] es:" << numeroide << endl << endl;
 
 }
 
 void Punteros::impirmirCalculoRaizCuadradaReferencia() {
+
+    float numeroide = 0.0;
+
+    numeroide = 5;
+
+    cout << "\n Imprime datos de los punteros que pasan por valor_____________________________" << endl;
+    cout << "\t El valor originala de la variable [ numero ] es: " << numeroide << endl;
+    numeroide = numeroRaizAlCuadradoReferencia(numeroide);
+    cout << "\n\t El resultado a la raiz cuadrad de la variable [numero] es:" << numeroide << endl << endl;
+
 
 }
